@@ -1,0 +1,9 @@
+<div *ngIf="serviceCreationStatus; else noService" class="alert alert-success text-center">Service Created Successfully</div>
+<<ng-template #noService>
+  <div *ngIf="!serviceCreationStatus"  class="alert alert-warning text-center">No Services Found</div>
+</ng-template>
+
+<button class="btn btn-primary" [disabled] ="!allowAddService" (click)="onCreateService()">add</button>
+<app-service></app-service>
+<app-service></app-service>
+<app-service></app-service>
